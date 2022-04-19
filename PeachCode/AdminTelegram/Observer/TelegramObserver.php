@@ -1,7 +1,6 @@
 <?php
-declare(strict_types=1);
 
-namespace PeachCode\Telegram\Observer;
+namespace PeachCode\AdminTelegram\Observer;
 
 use Exception;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -16,11 +15,11 @@ use Psr\Log\LoggerInterface;
  */
 class TelegramObserver implements ObserverInterface
 {
-    public const IS_ENABLE = 'checkout/custom/telegram_integration';
+    public const IS_ENABLE = 'telegram_links/general/telegram_integration';
 
-    public const TELEGRAM_API_TOKEN = 'checkout/custom/telegram_api_token';
+    public const TELEGRAM_API_TOKEN = 'telegram_links/general/telegram_api_token';
 
-    public const TELEGRAM_CHAT_ID = 'checkout/custom/telegram_chat_id';
+    public const TELEGRAM_CHAT_ID = 'telegram_links/general/telegram_chat_id';
 
     /**
      * @var QuoteRepository
@@ -54,7 +53,6 @@ class TelegramObserver implements ObserverInterface
      * Execute for send message to the bot
      *
      * @param Observer $observer
-     * @return $this|string
      * @throws NoSuchEntityException
      */
     public function execute(Observer $observer)
@@ -79,13 +77,10 @@ class TelegramObserver implements ObserverInterface
             ];
 
             try {
-                return file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+                 return file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
             } catch (Exception $e) {
                 $this->logger->critical("Telegram connection is wrong. " . $e->getMessage());
-                return $this;
             }
         }
-
-        return $this;
     }
 }

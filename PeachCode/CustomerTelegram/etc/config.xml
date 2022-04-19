@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <telegram_customer_links>
+            <general>
+                <telegram_integration>0</telegram_integration>
+                <telegram_api_token>Example</telegram_api_token>
+            </general>
+        </telegram_customer_links>
+    </default>
+</config>

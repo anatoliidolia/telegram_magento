@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'PeachCode_Telegram', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'PeachCode_AdminTelegram', __DIR__);

@@ -1,0 +1,34 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="telegram" translate="label" sortOrder="900">
+            <label>Telegram</label>
+        </tab>
+        <section id="telegram_admin_links" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Admin Notification</label>
+            <tab>telegram</tab>
+            <resource>PeachCode_AdminTelegram::telegram_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Telegram Integration</label>
+                <field id="telegram_integration" translate="label" type="select" sortOrder="0" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Telegram Integration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="telegram_api_token" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Telegram API Token</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: 5012344222:AREiD_eD1PR70akx6SYPFiVkMbi6sf5Orc4</comment>
+                </field>
+                <field id="telegram_chat_id" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Telegram chat ID</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: 5012345678</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,5 +1,5 @@
 {
-  "name": "peachcode/telegram",
+  "name": "peachcode/admintelegram",
   "description": "N/A",
   "require": {
     "php": "~7.1.0||~7.2.0",
@@ -23,7 +23,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "PeachCode\\Telegram\\": ""
+      "PeachCode\\AdminTelegram\\": ""
     }
   }
 }
