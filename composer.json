@@ -1,0 +1,16 @@
+{
+  "name": "peachcode/telegram-magento",
+  "description": "Magento & Telegram",
+  "type": "library",
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Anatolii Dolia",
+      "email": "doliaanatolii@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
