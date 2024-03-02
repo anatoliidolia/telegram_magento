@@ -15,11 +15,11 @@ use Psr\Log\LoggerInterface;
  */
 class TelegramObserver implements ObserverInterface
 {
-    public const IS_ENABLE = 'telegram_links/general/telegram_integration';
+    public const IS_ENABLE = 'telegram_admin_links/general/telegram_integration';
 
-    public const TELEGRAM_API_TOKEN = 'telegram_links/general/telegram_api_token';
+    public const TELEGRAM_API_TOKEN = 'telegram_admin_links/general/telegram_api_token';
 
-    public const TELEGRAM_CHAT_ID = 'telegram_links/general/telegram_chat_id';
+    public const TELEGRAM_CHAT_ID = 'telegram_admin_links/general/telegram_chat_id';
 
     /**
      * @var QuoteRepository
